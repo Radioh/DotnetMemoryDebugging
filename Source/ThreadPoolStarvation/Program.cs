@@ -1,5 +1,6 @@
 ﻿// Example of thread pool starvation where the number of threads used by the process increases over time while no work is being completed.
 // Also notice how the CPU usage is very low
+// Try to remove the Task.Yield() call and see how the thread pool is not starved anymore because the task is ran to completion on the local queue
 
 using System.Diagnostics;
 

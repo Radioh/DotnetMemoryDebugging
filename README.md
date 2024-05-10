@@ -1,7 +1,7 @@
 # Advanced .NET Memory Debugging
 
 ## Description
-This project contains examples of common memory issues in .NET applications to be used when training debugging.
+This project contains examples of code which will force the program into a state of common memory issues in .NET applications to be used when training debugging.
 
 ## Example: [Memory Leak](Source/MemoryLeak/Program.cs)
 Demonstrates a scenario where a list of objects is continuously populated without being cleared, 
@@ -10,8 +10,8 @@ leading to a potential memory leak because the objects are not being garbage col
 ## Example: [Threadpool starvation](Source/ThreadPoolStarvation/Program.cs)
 Demonstrates a scenario where the threadpool continues to grow due to a long running being moved to the global queue and continuously taking in work on local queues.
 
-## Example: Blocked finalizer queue (TBD)
-Demonstrates a scenario where the finalizer queue is blocked due to a long running finalizer.
+## Example: [Blocked finalizer queue](Source/BlockedFinalizerQueue/Program.cs)
+Demonstrates a scenario where the finalizer queue is blocked due to a long running finalizer causing a memory leak.
 
 ## Getting Started with the Examples
 To run the examples, simply clone the repository and run the projects.

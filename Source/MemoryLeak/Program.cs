@@ -1,19 +1,19 @@
-﻿// Keep adding more and more objects to the list and see how the memory usage grows.
+﻿// Keep adding more and more objects to the pinned list and see how the memory usage grows.
 
-var persons = new List<Person>();
+var people = new List<Person>();
 var exit = false;
 
 while (!exit)
 {
-    foreach (var i in Enumerable.Range(0, 10_000))
+    for (var i = 0; i < 10_000; i++)
     {
-        persons.Add(new Person(
-            id: persons.Count,
-            firstName: $"John #{persons.Count}",
+        people.Add(new Person(
+            id: i,
+            firstName: $"John #{i}",
             lastName: "Doe"));
     }
 
-    Console.WriteLine($"Person count: {persons.Count:N0}");
+    Console.WriteLine($"Person count: {people.Count:N0}");
     Console.WriteLine($"Memory used: {GC.GetTotalMemory(false):N0} bytes");
     Console.WriteLine("Leak more memory (y/n)");
 

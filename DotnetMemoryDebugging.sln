@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryLeak", "Source\Memory
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPoolStarvation", "Source\ThreadPoolStarvation\ThreadPoolStarvation.csproj", "{3E30C7AC-A29F-465F-8774-DF88BB85FA41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockedFinalizerQueue", "Source\BlockedFinalizerQueue\BlockedFinalizerQueue.csproj", "{9E8EE1BC-F846-4A59-B967-2D363FF804E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,5 +28,9 @@ Global
 		{3E30C7AC-A29F-465F-8774-DF88BB85FA41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E30C7AC-A29F-465F-8774-DF88BB85FA41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E30C7AC-A29F-465F-8774-DF88BB85FA41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E8EE1BC-F846-4A59-B967-2D363FF804E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E8EE1BC-F846-4A59-B967-2D363FF804E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E8EE1BC-F846-4A59-B967-2D363FF804E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E8EE1BC-F846-4A59-B967-2D363FF804E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
