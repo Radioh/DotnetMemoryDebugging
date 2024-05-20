@@ -17,10 +17,12 @@ Demonstrates a scenario where the finalizer queue is blocked due to a long runni
 To run the examples, simply clone the repository and run the projects.
 
 ## How to debug the applications using dotnet-dump
+
 1. Install the dotnet-dump tool by running the following command:
 ```bash
 dotnet tool install -g dotnet-dump
 ```
+You can also visit the documentation from [https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-dump](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-dump)
 2. Run the application and get the process id by running the following command:
 ```bash
 dotnet-dump ps
