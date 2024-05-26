@@ -13,6 +13,9 @@ Demonstrates a scenario where the threadpool continues to grow due to a long run
 ## Example: [Blocked finalizer queue](Source/BlockedFinalizerQueue/Program.cs)
 Demonstrates a scenario where the finalizer queue is blocked due to a long running finalizer causing a memory leak.
 
+## Example: [Entity Framework cartesian explosion](Source/CartesianExplosion/Program.cs)
+Demonstrates a scenario where a simple EF query on a small amount of data is executed that returns a large number of rows, causing the application to use a lot of memory.
+
 ## Getting Started with the Examples
 To run the examples, simply clone the repository and run the projects.
 
