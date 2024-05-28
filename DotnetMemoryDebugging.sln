@@ -6,6 +6,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{5C
 		README.md = README.md
 		DotnetMemoryDebugging.sln = DotnetMemoryDebugging.sln
 		.gitignore = .gitignore
+		NetMemoryDebugCheatsheet.md = NetMemoryDebugCheatsheet.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryLeak", "Source\MemoryLeak\MemoryLeak.csproj", "{4F32E001-F4B4-4801-BC73-5F840B90AED0}"

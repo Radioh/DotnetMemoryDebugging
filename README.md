@@ -45,5 +45,7 @@ dotnet-dump collect -p <process id>
 dotnet-dump analyze <dump file>
 ```
 
+5. Run the examples and use the cheat sheet to identify the root cause of the memory issue by following the steps in the [NetMemoryDebugCheatsheet.md](NetMemoryDebugCheatsheet.md) file.
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
