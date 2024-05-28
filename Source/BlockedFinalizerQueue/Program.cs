@@ -10,8 +10,9 @@ while (!exit)
     Console.WriteLine($"Memory used: {GC.GetTotalMemory(false):N0} bytes");
     Console.WriteLine("Leak more memory (y/n)");
 
-    var answer = Console.ReadLine();
-    exit = answer != "y";
+    var answer = Console.ReadKey();
+    exit = answer.Key != ConsoleKey.Y;
+    Console.WriteLine();
 }
 
 Console.WriteLine("Bye!");

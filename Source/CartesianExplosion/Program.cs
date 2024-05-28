@@ -1,8 +1,8 @@
-﻿// Example of Cartesian Explosion in EF Core when using Include with a very small amount of data
-// 1 PrimaryTable - 10 JoinTable1 - 100 JoinTable2 - 100 JoinTable3 - 100 JoinTable4 = 10.000.000 rows
+﻿// Example program that demonstrates a Cartesian Product Explosion in EF Core when using Include on a very small amount of data
+// 1 PrimaryTable -> 10 JoinTable1 -> 100 JoinTable2 -> 100 JoinTable3 -> 100 JoinTable4 = 10.000.000 rows
 // Even removing the JoinTable4 from the query, the query will still produce 100.000 rows
 // LINQ Method Syntax will only generate 1 result object, but the underlying SQL query will return 10.000.000 rows
-// using LINQ Query Syntax will generate the 10.000.000 objects but using the same underlying SQL query
+// using LINQ Query Syntax will generate the 10.000.000 objects using the same underlying SQL query
 // Try to add "AsSplitQuery()" to the Include method to avoid the Cartesian Explosion and notice the speed difference
 
 using CartesianExplosion;
@@ -43,12 +43,12 @@ Console.WriteLine("=====================================");
 Console.WriteLine(lingQuerySyntaxQuerySqlString);
 Console.WriteLine("=====================================");
 
-Console.WriteLine("Execute Method syntax query or Query syntax query? (Y = Method/ N = Query)");
-var key = Console.ReadKey();
+Console.WriteLine("Execute Method syntax query or Query syntax query? (y = Method/n = Query)");
+var answer = Console.ReadKey();
 
 Console.WriteLine("\n\nIf queries are taking too long, but you still want to debug explosion example, then remove .Include on JoinTable4 from the query.");
 
-if (key.Key == ConsoleKey.Y)
+if (answer.Key == ConsoleKey.Y)
 {
     Console.WriteLine("Executing Method Syntax query...");
     var methodResult = await lingMethodSyntaxQuery.ToListAsync(); // Result count: 1

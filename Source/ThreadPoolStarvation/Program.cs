@@ -1,6 +1,6 @@
-﻿// Example of thread pool starvation where the number of threads used by the process increases over time while no work is being completed.
+﻿// Example program that demonstrates Thread Pool Starvation where the number of threads used by the process increases over time while no work is being completed.
 // Also notice how the CPU usage is very low
-// Try to remove the Task.Yield() call and see how the thread pool is not starved anymore because the task is ran to completion on the local queue
+// Try to remove the Task.Yield() call and see how the thread pool is not starved anymore because the task has ran to completion on the local queue
 
 using System.Diagnostics;
 
@@ -19,7 +19,17 @@ void Producer()
 {
     while (true)
     {
-        Console.WriteLine($"Threads used: {Process.GetCurrentProcess().Threads.Count}");
+        var threadCount = Process.GetCurrentProcess().Threads.Count;
+        Console.WriteLine($"Threads used: {threadCount}");
+
+        if (threadCount > 100)
+        {
+            Console.WriteLine("Take a memory dump now.");
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
+            Console.WriteLine("Bye!");
+            break;
+        }
 
         _ = ProcessAsync();
 

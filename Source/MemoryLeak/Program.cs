@@ -1,4 +1,4 @@
-﻿// Keep adding more and more objects to the pinned list and see how the memory usage grows.
+﻿// Example program that allocates more and more memory to a list pinned in memory.
 
 var people = new List<Person>();
 var exit = false;
@@ -13,12 +13,14 @@ while (!exit)
             lastName: "Doe"));
     }
 
+    Console.WriteLine($"Take a memory dump now.");
     Console.WriteLine($"Person count: {people.Count:N0}");
     Console.WriteLine($"Memory used: {GC.GetTotalMemory(false):N0} bytes");
     Console.WriteLine("Leak more memory (y/n)");
 
-    var answer = Console.ReadLine();
-    exit = answer != "y";
+    var answer = Console.ReadKey();
+    exit = answer.Key != ConsoleKey.Y;
+    Console.WriteLine();
 }
 
 Console.WriteLine("Bye!");
