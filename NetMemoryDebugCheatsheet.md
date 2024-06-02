@@ -16,7 +16,7 @@ It can be used with the examples in the [DotnetMemoryDebugging](https://github.c
 |dumpheap -stat|Display the statistics for the heap. Look for the largest objects which will be shown at the bottom of the list. Look for objects that are recognizable from the code.|
 |dumpheap -mt {address}|Dump the heap on a specific address. Use the address from the dumpheap -stat command.|
 |do {address}|Display the object at the address. Use the address from the dumpheap -mt command. Note if a thread is holding the object. Is useful when you want to inspect the CLR stack of the thread.|
-|gcroot -mt {address}|Display the root of the object which is holding the object.|
+|gcroot {address}|Display the root of the object which is holding the object.|
 |clrthreads|Display the CLR threads. If you see a lot of threads, it might be a sign of thread pool starvation.|
 |setthread {thread_id}|Set the thread to be the thread specified. Use the thread id from the clrthreads command.|
 |clrstack|Display the CLR stack of the current thread.|

@@ -15,7 +15,7 @@ Use this example to learn how to identify thread pool starvation by inspecting t
 
 ## Example: [Blocked finalizer queue](Source/BlockedFinalizerQueue/Program.cs)
 Demonstrates a scenario where the finalizer queue is blocked due to a long running finalizer causing a memory leak.
-Use this example to identify a blocked finalizer queue by inspecting objects on the heap, their parents and finalizer queue CLR stack.
+Use this example to identify a blocked finalizer queue by inspecting the finalizer queue CLR stack.
 
 ## Example: [Entity Framework cartesian explosion](Source/CartesianExplosion/Program.cs)
 Demonstrates a scenario where a simple EF query on a small amount of data is executed that returns a large number of rows, causing the application to use a lot of memory.
