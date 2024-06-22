@@ -32,6 +32,7 @@ They will pause at a good point to take a memory dump and analyze.
 dotnet tool install -g dotnet-dump
 ```
 You can also visit the documentation from [https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-dump](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-dump)
+
 2. Run the application and get the process id by running the following command:
 ```bash
 dotnet-dump ps
