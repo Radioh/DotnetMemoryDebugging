@@ -26,4 +26,4 @@ It can be used with the examples in the [DotnetMemoryDebugging](https://github.c
 ## Note
 There are many more commands available in the dotnet-dump tool. You can find the full list of commands by running the help command.
 This quick start is designed to help you get started with the most common commands to identify memory issues in .NET applications.
-If you don't find the issue after you have followed the commands, then you should have a pretty good idea what state the system is in and what symptoms the issue it causing.
+If you don't find the issue after you have followed the commands, then you should have a pretty good idea what state the system is in and what symptoms the issue is causing.
